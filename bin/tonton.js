@@ -27,6 +27,9 @@ Presets:
 Options:
   -s, --sound <name>    Sound to play (default: "Ping" on macOS, "chime" elsewhere)
   -v, --volume <0-1>    Volume level, 0.0 to 1.0 (macOS only, default: 1.0)
+  -m, --mute            Mute all sounds (persists across runs)
+  -u, --unmute          Unmute sounds
+  --status              Show current mute status
   -l, --list            List available sounds
   -h, --help            Show this help
   --version             Show version
@@ -59,6 +62,24 @@ After any command:
   if (arg === '--remove') {
     console.log('Removing tonton hooks...\n');
     require('../lib/setup').unsetup();
+    process.exit(0);
+  }
+
+  if (arg === '-m' || arg === '--mute') {
+    require('../lib/config').setMuted(true);
+    console.log('Muted. Run tonton --unmute to re-enable sounds.');
+    process.exit(0);
+  }
+
+  if (arg === '-u' || arg === '--unmute') {
+    require('../lib/config').setMuted(false);
+    console.log('Unmuted. Sounds are back on.');
+    process.exit(0);
+  }
+
+  if (arg === '--status') {
+    const muted = require('../lib/config').isMuted();
+    console.log(muted ? 'Muted' : 'Unmuted');
     process.exit(0);
   }
 

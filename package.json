@@ -1,0 +1,40 @@
+{
+  "name": "tonton",
+  "version": "1.0.0",
+  "description": "Play a notification sound from the CLI. Zero dependencies. Perfect for AI coding tool hooks.",
+  "keywords": [
+    "notification",
+    "sound",
+    "beep",
+    "alert",
+    "cli",
+    "claude-code",
+    "codex",
+    "hook",
+    "bell",
+    "ding"
+  ],
+  "license": "MIT",
+  "bin": {
+    "tonton": "./bin/tonton.js"
+  },
+  "main": "./lib/index.js",
+  "exports": {
+    ".": {
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.js"
+    }
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "test": "node test/test.js"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "tonton-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Play a notification sound from the CLI. Zero dependencies. Perfect for AI coding tool hooks.",
   "keywords": [
     "notification",
@@ -24,7 +24,7 @@
     "url": "https://github.com/kyrolloszakaria/tonton/issues"
   },
   "bin": {
-    "tonton": "./bin/tonton.js"
+    "tonton": "bin/tonton.js"
   },
   "main": "./lib/index.js",
   "exports": {

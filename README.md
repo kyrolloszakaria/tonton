@@ -54,11 +54,11 @@ Add to `~/.claude/settings.json`:
 ```json
 {
   "hooks": {
-    "AfterAssistantTurn": [
-      { "type": "command", "command": "npx tonton-cli --done" }
+    "Stop": [
+      { "matcher": "", "hooks": [{ "type": "command", "command": "npx tonton-cli --done" }] }
     ],
     "Notification": [
-      { "type": "command", "command": "npx tonton-cli --input" }
+      { "matcher": "", "hooks": [{ "type": "command", "command": "npx tonton-cli --input" }] }
     ]
   }
 }

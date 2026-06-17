@@ -7,7 +7,7 @@ Perfect for getting pinged when AI coding tools (Claude Code, Codex, etc.) finis
 ## Quick Start
 
 ```bash
-npx tonton --setup
+npx tonton-cli --setup
 ```
 
 That's it. Claude Code will now play:
@@ -17,10 +17,10 @@ That's it. Claude Code will now play:
 ## Install
 
 ```bash
-npm install -g tonton
+npm install -g tonton-cli
 ```
 
-Or use without installing — `npx tonton` works everywhere.
+Or use without installing — `npx tonton-cli` works everywhere.
 
 ## Two Sounds
 
@@ -40,12 +40,12 @@ tonton            # default notification sound
 ### Claude Code — automatic setup
 
 ```bash
-npx tonton --setup
+npx tonton-cli --setup
 ```
 
 This adds hooks to `~/.claude/settings.json` so Claude Code plays distinct sounds when done vs. needing input. Run once, works forever.
 
-To remove: `npx tonton --remove`
+To remove: `npx tonton-cli --remove`
 
 ### Claude Code — manual setup
 
@@ -55,10 +55,10 @@ Add to `~/.claude/settings.json`:
 {
   "hooks": {
     "AfterAssistantTurn": [
-      { "type": "command", "command": "npx tonton --done" }
+      { "type": "command", "command": "npx tonton-cli --done" }
     ],
     "Notification": [
-      { "type": "command", "command": "npx tonton --input" }
+      { "type": "command", "command": "npx tonton-cli --input" }
     ]
   }
 }
@@ -67,21 +67,21 @@ Add to `~/.claude/settings.json`:
 ### Codex CLI
 
 ```bash
-codex "fix the bug" ; npx tonton --done
+codex "fix the bug" ; npx tonton-cli --done
 ```
 
 ### Any command
 
 ```bash
-npm test ; npx tonton --done
-long-running-task ; npx tonton
+npm test ; npx tonton-cli --done
+long-running-task ; npx tonton-cli
 ```
 
 ### Shell alias
 
 ```bash
 # Add to ~/.zshrc or ~/.bashrc
-notify() { "$@"; npx tonton --done; }
+notify() { "$@"; npx tonton-cli --done; }
 
 # Then use:
 notify npm test
@@ -105,7 +105,7 @@ tonton --list
 ## Programmatic API
 
 ```js
-import { play, listSounds } from 'tonton';
+import { play, listSounds } from 'tonton-cli';
 
 await play();                          // default sound
 await play({ sound: 'done' });         // completion sound

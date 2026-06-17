@@ -32,16 +32,16 @@ Options:
   --version             Show version
 
 Quick start:
-  npx tonton --setup                  Configure Claude Code hooks automatically
+  npx tonton-cli --setup                  Configure Claude Code hooks automatically
 
 Examples:
-  npx tonton                          Play default notification sound
-  npx tonton --done                   Agent finished working
-  npx tonton --input                  Agent needs your attention
-  npx tonton -s Glass                 Play the Glass sound (macOS)
+  npx tonton-cli                          Play default notification sound
+  npx tonton-cli --done                   Agent finished working
+  npx tonton-cli --input                  Agent needs your attention
+  npx tonton-cli -s Glass                 Play the Glass sound (macOS)
 
 After any command:
-  codex "fix the bug" ; npx tonton --done`);
+  codex "fix the bug" ; npx tonton-cli --done`);
     process.exit(0);
   }
 

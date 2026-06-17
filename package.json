@@ -15,6 +15,14 @@
     "ding"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyrolloszakaria/tonton.git"
+  },
+  "homepage": "https://github.com/kyrolloszakaria/tonton#readme",
+  "bugs": {
+    "url": "https://github.com/kyrolloszakaria/tonton/issues"
+  },
   "bin": {
     "tonton": "./bin/tonton.js"
   },

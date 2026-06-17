@@ -1,0 +1,11 @@
+{
+  "name": "tonton",
+  "description": "Notification sounds for Claude Code — plays a distinct sound when the agent finishes (--done) or needs your input (--input). Zero config after install.",
+  "version": "1.0.1",
+  "author": {
+    "name": "kyrolloszakaria"
+  },
+  "homepage": "https://github.com/kyrolloszakaria/tonton",
+  "repository": "https://github.com/kyrolloszakaria/tonton",
+  "license": "MIT"
+}

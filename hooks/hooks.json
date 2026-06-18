@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "npx tonton-cli --done"
+            "command": "tonton --done"
           }
         ]
       }
@@ -17,7 +17,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "npx tonton-cli --input"
+            "command": "tonton --input"
           }
         ]
       }

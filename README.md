@@ -45,6 +45,13 @@ npx tonton-cli --setup
 
 This adds hooks to `~/.claude/settings.json` so Claude Code plays distinct sounds when done vs. needing input. Run once, works forever.
 
+**Updating?** Just run `--setup` again — it removes old hooks before adding new ones, so there's no doubling:
+
+```bash
+npm update -g tonton-cli
+tonton --setup
+```
+
 To remove: `npx tonton-cli --remove`
 
 ### Claude Code — manual setup
@@ -57,7 +64,7 @@ Add to `~/.claude/settings.json`:
     "Stop": [
       { "matcher": "", "hooks": [{ "type": "command", "command": "npx tonton-cli --done" }] }
     ],
-    "Notification": [
+    "PermissionRequest": [
       { "matcher": "", "hooks": [{ "type": "command", "command": "npx tonton-cli --input" }] }
     ]
   }

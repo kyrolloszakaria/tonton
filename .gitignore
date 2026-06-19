@@ -1,3 +1,4 @@
 node_modules/
 *.tgz
 token.txt
+.codex/tonton-hook-test-steps.md

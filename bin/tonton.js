@@ -17,8 +17,8 @@ for (let i = 0; i < args.length; i++) {
 Usage: tonton [options]
 
 Setup:
-  --setup               Auto-configure Claude Code hooks (one-time)
-  --remove              Remove tonton hooks from Claude Code
+  --setup               Auto-configure Claude Code & Codex CLI hooks (one-time)
+  --remove              Remove tonton hooks from Claude Code & Codex CLI
 
 Presets:
   -d, --done            Agent finished (descending chime)
@@ -54,13 +54,13 @@ After any command:
   }
 
   if (arg === '--setup') {
-    console.log('Setting up Claude Code hooks...\n');
+    console.log('Setting up hooks...\n');
     require('../lib/setup').setup();
     process.exit(0);
   }
 
   if (arg === '--remove') {
-    console.log('Removing tonton hooks...\n');
+    console.log('Removing hooks...\n');
     require('../lib/setup').unsetup();
     process.exit(0);
   }

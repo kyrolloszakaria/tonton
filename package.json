@@ -1,6 +1,6 @@
 {
   "name": "tonton-cli",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Play a notification sound from the CLI. Zero dependencies. Perfect for AI coding tool hooks.",
   "keywords": [
     "notification",
